@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="reflectlist.MoodController"
+            prefWidth="1100"
+            prefHeight="750"
+            style="
+                -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #FDF2F8, #ECFEFF);
+                -fx-padding: 30;
+            ">
+
+    <!-- ================= CENTER CONTENT ================= -->
+    <center>
+        <VBox alignment="CENTER" spacing="30">
+
+            <!-- Mood Title -->
+            <Label fx:id="moodLabel"
+                   text="Mood Name"
+                   style="
+                       -fx-font-size: 34px;
+                       -fx-font-weight: bold;
+                       -fx-text-fill: #1F2937;
+                   "/>
+
+            <!-- Ayat Card -->
+            <VBox spacing="12"
+                  alignment="CENTER"
+                  maxWidth="850"
+                  style="
+                      -fx-background-color: #FFFFFF;
+                      -fx-padding: 25;
+                      -fx-background-radius: 16;
+                      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 12, 0, 0, 4);
+                  ">
+
+                <Label text="Ayat"
+                       style="
+                           -fx-font-size: 20px;
+                           -fx-font-weight: bold;
+                           -fx-text-fill: #9D174D;
+                       "/>
+
+                <Label fx:id="ayatLabel"
+                       wrapText="true"
+                       style="
+                           -fx-font-size: 16px;
+                           -fx-text-fill: #374151;
+                           -fx-alignment: center;
+                       "/>
+            </VBox>
+
+            <!-- Dua Card -->
+            <VBox spacing="12"
+                  alignment="CENTER"
+                  maxWidth="850"
+                  style="
+                      -fx-background-color: #FFFFFF;
+                      -fx-padding: 25;
+                      -fx-background-radius: 16;
+                      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 12, 0, 0, 4);
+                  ">
+
+                <Label text="Dua / Prayer"
+                       style="
+                           -fx-font-size: 20px;
+                           -fx-font-weight: bold;
+                           -fx-text-fill: #065F46;
+                       "/>
+
+                <Label fx:id="duaLabel"
+                       wrapText="true"
+                       style="
+                           -fx-font-size: 16px;
+                           -fx-text-fill: #374151;
+                           -fx-alignment: center;
+                       "/>
+            </VBox>
+
+        </VBox>
+    </center>
+
+    <!-- ================= BOTTOM BUTTONS ================= -->
+    <bottom>
+        <HBox alignment="CENTER" spacing="10" style="-fx-padding: 10 20 0 20;">
+
+            <!-- Back Button -->
+            <Button text="← Back to Dashboard"
+                    onAction="#back"
+                    prefWidth="230"
+                    prefHeight="52"
+                    style="
+                        -fx-background-color: #F97316;
+                        -fx-text-fill: white;
+                        -fx-font-size: 16px;
+                        -fx-font-weight: bold;
+                        -fx-background-radius: 14;
+                    "/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <!-- Todo Button -->
+            <Button text="→ TO DO LIST"
+                    onAction="#todo"
+                    prefWidth="230"
+                    prefHeight="52"
+                    style="
+                        -fx-background-color: #22C55E;
+                        -fx-text-fill: white;
+                        -fx-font-size: 16px;
+                        -fx-font-weight: bold;
+                        -fx-background-radius: 14;
+                    "/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
