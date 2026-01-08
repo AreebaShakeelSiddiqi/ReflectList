@@ -88,8 +88,7 @@ Here’s the **class diagram** for the project:
 <summary><b>🔐 Login Interface</b></summary>
 
 > 📷 *(Insert Login Screen Screenshot)*
-> ## screenshots
-![My Screenshot](images/login.png)
+DepressedMood.png
 </details>
 
 <details>
