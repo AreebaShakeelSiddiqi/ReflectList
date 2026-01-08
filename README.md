@@ -78,7 +78,7 @@ SELECT * FROM tasks;
 
 Here’s the **class diagram** for the project:
 
-> 📷 *(Insert UML diagram image here)*
+![UML Diagram](https://github.com/AreebaShakeelSiddiqi/ReflectList/blob/main/UML%20Diagram.svg)
 
 ---
 
@@ -87,14 +87,14 @@ Here’s the **class diagram** for the project:
 <details>
 <summary><b>🔐 Login Interface</b></summary>
 
-> 📷 *(Insert Login Screen Screenshot)*
-DepressedMood.png
+![login](https://github.com/AreebaShakeelSiddiqi/ReflectList/blob/main/login.png)
+
 </details>
 
 <details>
 <summary><b>📊 Dashboard</b></summary>
 
-> 📷 *(Insert Dashboard Screenshot)*
+> ![dashboard](https://github.com/AreebaShakeelSiddiqi/ReflectList/blob/main/dashboard.png)
 
 </details>
 
@@ -103,26 +103,29 @@ DepressedMood.png
 
 ### 😄 Happy Mood
 
-> 📷 *(Insert Happy Mood Screenshot)*
+![happyMood](https://github.com/AreebaShakeelSiddiqi/ReflectList/blob/main/happyMood.png)
+
+### 😄 Excited Mood
+![excitedMood](https://github.com/AreebaShakeelSiddiqi/ReflectList/blob/main/ExcitedMood.png)
 
 ### 😢 Sad Mood
 
-> 📷 *(Insert Sad Mood Screenshot)*
+![sadMood](https://github.com/AreebaShakeelSiddiqi/ReflectList/blob/main/sadMood.png)
 
 ### 😔 Lonely Mood
 
-> 📷 *(Insert Lonely Mood Screenshot)*
+![lonelyMood](https://github.com/AreebaShakeelSiddiqi/ReflectList/blob/main/lonelyMood.png)
 
 ### 😞 Depressed Mood
 
-> 📷 *(Insert Depressed Mood Screenshot)*
+![depressedMood](https://github.com/AreebaShakeelSiddiqi/ReflectList/blob/main/DepressedMood.png)
 
 </details>
 
 <details>
 <summary><b>📝 To-Do List</b></summary>
 
-> 📷 *(Insert To-Do List Screenshot)*
+![todo_list](https://github.com/AreebaShakeelSiddiqi/ReflectList/blob/main/todo_list.png)
 </details>
 ---
 ## ⭐ Features
