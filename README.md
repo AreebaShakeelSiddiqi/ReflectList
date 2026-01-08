@@ -1,2 +1,151 @@
-# ReflectList
-Reflect list is a project that helps user organize task and practice self-accountability through an Islamic perspective.
+
+# 🌿 Reflect List
+
+<p align="center">
+  <b>A JavaFX-based To-Do & Mood Reflection Application</b><br>
+  <i>Productivity with Spiritual Reflection</i>
+</p>
+
+---
+
+## 📌 Project Description
+
+**Reflect List** is a **JavaFX-based desktop application** designed to help users manage their daily tasks while also reflecting on their emotional well-being.
+
+It integrates **motivational Ayat and Duas** based on the user's selected mood, providing **spiritual guidance alongside productivity features**.
+
+### ✨ Users can:
+- 🔐 Log in with a **username** (no password required)
+- 📝 Track and manage tasks using a **To-Do List**
+- 😊 Select their **current mood** and receive motivational content
+- 🧭 Navigate easily between **Dashboard, Mood, and To-Do sections**
+
+---
+
+## 🚀 How to Run the Project
+
+### ✅ Prerequisites
+- **Java JDK 17 or above**
+- **JavaFX SDK**
+- **MySQL Server** (running locally)
+- IDE such as **IntelliJ IDEA** or **Eclipse**
+
+---
+
+### 🗄️ Database Setup
+
+```sql
+-- Create database
+CREATE DATABASE IF NOT EXISTS reflectlist;
+USE reflectlist;
+
+-- Create tasks table
+CREATE TABLE IF NOT EXISTS tasks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    task_name VARCHAR(255) NOT NULL,
+    is_done BOOLEAN DEFAULT FALSE
+);
+
+-- Insert built-in tasks
+INSERT INTO tasks (task_name) VALUES
+('Fajr'),
+('Zuhar'),
+('Asar'),
+('Maghrib'),
+('Isha'),
+('Recitation of Holy Quran'),
+('Recitation of Daily Adhkar');
+
+SELECT * FROM tasks;
+````
+
+---
+
+### ▶️ Steps to Run
+
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+   ```
+2. Import the project into your Java IDE
+3. Add **JavaFX SDK** to the module path
+4. Run `Main.java`
+
+---
+
+## 🧩 UML Diagram
+
+Here’s the **class diagram** for the project:
+
+> 📷 *(Insert UML diagram image here)*
+
+---
+
+## 🖥️ Screenshots of Main GUI
+
+<details>
+<summary><b>🔐 Login Interface</b></summary>
+
+> 📷 *(Insert Login Screen Screenshot)*
+
+</details>
+
+<details>
+<summary><b>📊 Dashboard</b></summary>
+
+> 📷 *(Insert Dashboard Screenshot)*
+
+</details>
+
+<details>
+<summary><b>😊 Mood Selection</b></summary>
+
+### 😄 Happy Mood
+
+> 📷 *(Insert Happy Mood Screenshot)*
+
+### 😢 Sad Mood
+
+> 📷 *(Insert Sad Mood Screenshot)*
+
+### 😔 Lonely Mood
+
+> 📷 *(Insert Lonely Mood Screenshot)*
+
+### 😞 Depressed Mood
+
+> 📷 *(Insert Depressed Mood Screenshot)*
+
+</details>
+
+<details>
+<summary><b>📝 To-Do List</b></summary>
+
+> 📷 *(Insert To-Do List Screenshot)*
+</details>
+---
+## ⭐ Features
+
+* 👤 User session management with **username**
+* 📖 Dynamic mood reflection with **random Ayat & Duas**
+* ✅ Fully functional **To-Do List**
+  * Add tasks
+  * Delete tasks
+  * Mark tasks as done
+* 🧭 Smooth navigation between **Dashboard, Mood & To-Do**
+* 🗄️ **MySQL database integration** for task persistence
+---
+## ⚠️ Limitations
+
+* ❌ No authentication beyond username
+* ❌ Supports only a **single local database**
+* ❌ Static mood categories (no custom moods)
+---
+## 🔮 Future Improvements
+
+* 🔐 Multi-user authentication with passwords
+* ☁️ Cloud database support
+* ➕ Custom moods, Ayat, and Duas
+* 📤 Export / Import tasks feature
+* 🎨 Improved UI with animations and responsive layout
