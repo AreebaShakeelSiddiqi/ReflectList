@@ -9,7 +9,7 @@ public class DBConnection {
             return DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/reflectlist", // DB name
                     "root", // MySQL username
-                    "abc123" // MySQL password
+                    "root123" // MySQL password
             );
         } catch (Exception e) {
             e.printStackTrace();

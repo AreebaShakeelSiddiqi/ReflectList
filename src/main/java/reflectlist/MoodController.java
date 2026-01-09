@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 public class MoodController {
@@ -73,8 +74,18 @@ public class MoodController {
                 dua = "No Dua available";
         }
 
+        // Set text to labels
         ayatLabel.setText(ayat);
         duaLabel.setText(dua);
+
+        // Set Quranic font (installed system font)
+        Font quranFont = Font.font("Al Qalam Quran Majeed 1", 24); // size 24, adjust as needed
+        ayatLabel.setFont(quranFont);
+        duaLabel.setFont(quranFont);
+
+        // Optional: center align text
+        ayatLabel.setStyle("-fx-alignment: center; -fx-text-alignment: center;");
+        duaLabel.setStyle("-fx-alignment: center; -fx-text-alignment: center;");
     }
 
     @FXML
