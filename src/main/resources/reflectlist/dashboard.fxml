@@ -5,104 +5,58 @@
 
 <VBox xmlns:fx="http://javafx.com/fxml"
       fx:controller="reflectlist.DashboardController"
-      alignment="CENTER"
-      spacing="22"
-      prefWidth="800"
-      prefHeight="650"
-      style="
-          -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ECFEFF, #F8FAFC, #FDF2F8);
-          -fx-padding: 30;
-      ">
+      alignment="TOP_CENTER"
+      spacing="30"
+      style="-fx-padding:30; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ECFEFF, #F8FAFC, #FDF2F8);">
 
-    <!-- Greeting -->
-    <Label fx:id="greetingLabel"
-           text="Welcome!"
-           style="
-               -fx-font-size: 26px;
-               -fx-font-weight: bold;
-               -fx-text-fill: #1F2937;
-           "/>
-
-    <!-- Blessing Text -->
+    <!-- Greeting and Labels -->
+    <Label fx:id="greetingLabel" text="Welcome!"
+           style="-fx-font-size:26px; -fx-font-weight:bold; -fx-text-fill:#1F2937;"/>
     <Label text="Indeed, today is a new blessing from Allah."
-           style="
-               -fx-font-size: 15px;
-               -fx-text-fill: #374151;
-           "/>
-
-    <!-- Question -->
+           style="-fx-font-size:15px; -fx-text-fill:#374151;"/>
     <Label text="How’s your mood today?"
-           style="
-               -fx-font-size: 18px;
-               -fx-font-weight: bold;
-               -fx-text-fill: #111827;
-           "/>
+           style="-fx-font-size:18px; -fx-font-weight:bold; -fx-text-fill:#111827;"/>
 
     <!-- Mood Buttons Card -->
-    <VBox alignment="CENTER"
-          style="
-              -fx-background-color: #FFFFFF;
-              -fx-padding: 25;
-              -fx-background-radius: 20;
-              -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 16, 0, 0, 6);
-          ">
+    <VBox alignment="CENTER" spacing="20"
+          style="-fx-background-color:#FFFFFF; -fx-padding:25; -fx-background-radius:20; -fx-effect:dropshadow(gaussian, rgba(0,0,0,0.1), 16, 0,0,6);">
 
-        <GridPane hgap="18" vgap="18" alignment="CENTER">
+        <GridPane hgap="20" vgap="20" alignment="CENTER">
 
             <!-- Row 1 -->
-            <Button text="Happy" onAction="#openMood"
-                    prefWidth="140" prefHeight="45"
-                    style="-fx-background-color: #FACC15; -fx-text-fill: #1F2937; -fx-font-weight: bold;"/>
-            <Button text="Sad" onAction="#openMood" GridPane.columnIndex="1"
-                    prefWidth="140" prefHeight="45"
-                    style="-fx-background-color: #93C5FD; -fx-text-fill: #1F2937; -fx-font-weight: bold;"/>
+            <Button text="Happy" onAction="#openMood" GridPane.rowIndex="0" GridPane.columnIndex="0"
+                    prefWidth="200" prefHeight="70" style="-fx-background-color:#FACC15; -fx-font-weight:bold;"/>
+            <Button text="Sad" onAction="#openMood" GridPane.rowIndex="0" GridPane.columnIndex="1"
+                    prefWidth="200" prefHeight="70" style="-fx-background-color:#93C5FD; -fx-font-weight:bold;"/>
 
             <!-- Row 2 -->
-            <Button text="Anxious" onAction="#openMood" GridPane.rowIndex="1"
-                    prefWidth="140" prefHeight="45"
-                    style="-fx-background-color: #FDBA74; -fx-text-fill: #1F2937; -fx-font-weight: bold;"/>
+            <Button text="Anxious" onAction="#openMood" GridPane.rowIndex="1" GridPane.columnIndex="0"
+                    prefWidth="200" prefHeight="70" style="-fx-background-color:#FDBA74; -fx-font-weight:bold;"/>
             <Button text="Stressed" onAction="#openMood" GridPane.rowIndex="1" GridPane.columnIndex="1"
-                    prefWidth="140" prefHeight="45"
-                    style="-fx-background-color: #FCA5A5; -fx-text-fill: #1F2937; -fx-font-weight: bold;"/>
+                    prefWidth="200" prefHeight="70" style="-fx-background-color:#FCA5A5; -fx-font-weight:bold;"/>
 
             <!-- Row 3 -->
-            <Button text="Excited" onAction="#openMood" GridPane.rowIndex="2"
-                    prefWidth="140" prefHeight="45"
-                    style="-fx-background-color: #C4B5FD; -fx-text-fill: #1F2937; -fx-font-weight: bold;"/>
+            <Button text="Excited" onAction="#openMood" GridPane.rowIndex="2" GridPane.columnIndex="0"
+                    prefWidth="200" prefHeight="70" style="-fx-background-color:#C4B5FD; -fx-font-weight:bold;"/>
             <Button text="Angry" onAction="#openMood" GridPane.rowIndex="2" GridPane.columnIndex="1"
-                    prefWidth="140" prefHeight="45"
-                    style="-fx-background-color: #F87171; -fx-text-fill: white; -fx-font-weight: bold;"/>
+                    prefWidth="200" prefHeight="70" style="-fx-background-color:#F87171; -fx-font-weight:bold;"/>
 
             <!-- Row 4 -->
-            <Button text="Lonely" onAction="#openMood" GridPane.rowIndex="3"
-                    prefWidth="140" prefHeight="45"
-                    style="-fx-background-color: #A5B4FC; -fx-text-fill: #1F2937; -fx-font-weight: bold;"/>
+            <Button text="Lonely" onAction="#openMood" GridPane.rowIndex="3" GridPane.columnIndex="0"
+                    prefWidth="200" prefHeight="70" style="-fx-background-color:#A5B4FC; -fx-font-weight:bold;"/>
             <Button text="Depressed" onAction="#openMood" GridPane.rowIndex="3" GridPane.columnIndex="1"
-                    prefWidth="140" prefHeight="45"
-                    style="-fx-background-color: #BFDBFE; -fx-text-fill: #1F2937; -fx-font-weight: bold;"/>
+                    prefWidth="200" prefHeight="70" style="-fx-background-color:#BFDBFE; -fx-font-weight:bold;"/>
 
             <!-- Row 5 -->
-            <Button text="Grateful" onAction="#openMood" GridPane.rowIndex="4"
-                    prefWidth="140" prefHeight="45"
-                    style="-fx-background-color: #86EFAC; -fx-text-fill: #064E3B; -fx-font-weight: bold;"/>
+            <Button text="Grateful" onAction="#openMood" GridPane.rowIndex="4" GridPane.columnIndex="0"
+                    prefWidth="200" prefHeight="70" style="-fx-background-color:#86EFAC; -fx-font-weight:bold;"/>
             <Button text="Frustrated" onAction="#openMood" GridPane.rowIndex="4" GridPane.columnIndex="1"
-                    prefWidth="140" prefHeight="45"
-                    style="-fx-background-color: #FDE68A; -fx-text-fill: #1F2937; -fx-font-weight: bold;"/>
-
+                    prefWidth="200" prefHeight="70" style="-fx-background-color:#FDE68A; -fx-font-weight:bold;"/>
         </GridPane>
     </VBox>
 
-    <!-- To Do Button -->
-    <Button text="TO DO LIST"
-            onAction="#openTodo"
-            prefWidth="220"
-            prefHeight="52"
-            style="
-                -fx-background-color: #22C55E;
-                -fx-text-fill: white;
-                -fx-font-size: 16px;
-                -fx-font-weight: bold;
-                -fx-background-radius: 14;
-            "/>
+    <!-- TO-DO Button -->
+    <Button text="TO DO LIST" onAction="#openTodo" prefWidth="220" prefHeight="52"
+            style="-fx-background-color:#22C55E; -fx-text-fill:white; -fx-font-size:16px; -fx-font-weight:bold; -fx-background-radius:14;"/>
 
 </VBox>

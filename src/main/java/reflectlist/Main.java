@@ -9,16 +9,16 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        // Load login.fxml
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
-        Scene scene = new Scene(fxmlLoader.load()); // No CSS
-
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Reflect List");
         stage.setScene(scene);
+        stage.setMaximized(true);
         stage.show();
     }
 
     public static void main(String[] args) {
         launch(args);
     }
+
 }

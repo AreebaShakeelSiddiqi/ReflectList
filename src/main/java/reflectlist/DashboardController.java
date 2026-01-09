@@ -23,11 +23,17 @@ public class DashboardController {
         MoodController.selectedMood = btn.getText();
 
         Stage stage = (Stage) btn.getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("mood.fxml"))));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("mood.fxml"));
+        Scene scene = new Scene(loader.load(), stage.getWidth(), stage.getHeight());
+        stage.setScene(scene);
+        stage.setMaximized(true);
     }
 
     public void openTodo(ActionEvent e) throws Exception {
         Stage stage = (Stage) ((Button)e.getSource()).getScene().getWindow();
-        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("todo.fxml"))));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("todo.fxml"));
+        Scene scene = new Scene(loader.load(), stage.getWidth(), stage.getHeight());
+        stage.setScene(scene);
+        stage.setMaximized(true);
     }
 }

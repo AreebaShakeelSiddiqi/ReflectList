@@ -15,7 +15,9 @@ public class LoginController {
         UserSession.username = usernameField.getText();
 
         Stage stage = (Stage) usernameField.getScene().getWindow();
-        Scene scene = new Scene(FXMLLoader.load(getClass().getResource("dashboard.fxml")));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("dashboard.fxml"));
+        Scene scene = new Scene(loader.load(), stage.getWidth(), stage.getHeight());
         stage.setScene(scene);
+        stage.setMaximized(true);
     }
 }

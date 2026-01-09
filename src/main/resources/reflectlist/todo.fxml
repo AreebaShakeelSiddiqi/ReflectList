@@ -3,96 +3,59 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns:fx="http://javafx.com/fxml"
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="reflectlist.TodoController"
-            prefWidth="800"
-            prefHeight="650"
-            style="
-                -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ECFEFF, #F8FAFC, #FDF2F8);
-                -fx-padding: 30;
-            ">
+            style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #ECFEFF, #F8FAFC, #FDF2F8); -fx-padding: 30;">
 
-    <!-- ================= CENTER CONTENT ================= -->
-    <center>
-        <VBox alignment="CENTER" spacing="20">
+    <!-- Center Content -->
+    <VBox alignment="CENTER" spacing="20"
+          AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="60"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
 
-            <!-- Title -->
-            <Label text="Today's Tasks"
-                   style="
-                       -fx-font-size: 26px;
-                       -fx-font-weight: bold;
-                       -fx-text-fill: #1F2937;
-                   "/>
+        <!-- Title -->
+        <Label text="Today's Tasks"
+               style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #1F2937;"/>
 
-            <!-- Task Card -->
-            <VBox spacing="15"
-                  alignment="CENTER"
-                  style="
-                      -fx-background-color: #FFFFFF;
-                      -fx-padding: 25;
-                      -fx-background-radius: 18;
-                      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 14, 0, 0, 6);
-                  ">
+        <!-- Task Card -->
+        <VBox spacing="15" alignment="CENTER"
+              style="-fx-background-color: #FFFFFF; -fx-padding: 25; -fx-background-radius: 18; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 14, 0, 0, 6);">
 
-                <!-- Task List -->
-                <ListView fx:id="taskList"
-                          prefHeight="260"
-                          prefWidth="420"
-                          style="
-                              -fx-background-radius: 12;
-                          "/>
+            <!-- Task List -->
+            <ListView fx:id="taskList"
+                      prefHeight="260" prefWidth="420"
+                      style="-fx-background-radius: 12;"/>
 
-                <!-- Task Input -->
-                <TextField fx:id="taskField"
-                           promptText="Add a new task"
-                           maxWidth="400"
-                           style="
-                               -fx-font-size: 14px;
-                               -fx-padding: 10;
-                               -fx-background-radius: 10;
-                               -fx-border-radius: 10;
-                               -fx-border-color: #CBD5E1;
-                           "/>
+            <!-- Task Input -->
+            <TextField fx:id="taskField"
+                       promptText="Add a new task"
+                       maxWidth="400"
+                       style="-fx-font-size: 14px; -fx-padding: 10; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: #CBD5E1;"/>
 
-                <!-- Add Button -->
+            <!-- Add + Delete Buttons -->
+            <HBox spacing="20" alignment="CENTER">
                 <Button text="Add Task"
                         onAction="#addTask"
-                        prefWidth="160"
-                        prefHeight="44"
-                        style="
-                            -fx-background-color: #22C55E;
-                            -fx-text-fill: white;
-                            -fx-font-size: 15px;
-                            -fx-font-weight: bold;
-                            -fx-background-radius: 12;
-                        "/>
-            </VBox>
+                        prefWidth="160" prefHeight="44"
+                        style="-fx-background-color: #22C55E; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 12;"/>
 
-            <!-- Motivation Text -->
-            <Label fx:id="motivationLabel"
-                   style="
-                       -fx-font-size: 14px;
-                       -fx-text-fill: #374151;
-                   "/>
-
+                <Button text="Delete Task"
+                        onAction="#deleteSelectedTask"
+                        prefWidth="160" prefHeight="44"
+                        style="-fx-background-color: #EF4444; -fx-text-fill: white; -fx-font-size: 15px; -fx-font-weight: bold; -fx-background-radius: 12;"/>
+            </HBox>
         </VBox>
-    </center>
 
-    <!-- ================= BOTTOM LEFT BUTTON ================= -->
-    <bottom>
-        <HBox alignment="CENTER_LEFT">
-            <Button text="← Back"
-                    onAction="#back"
-                    prefWidth="120"
-                    prefHeight="42"
-                    style="
-                        -fx-background-color: #F59E0B;
-                        -fx-text-fill: white;
-                        -fx-font-size: 14px;
-                        -fx-font-weight: bold;
-                        -fx-background-radius: 12;
-                    "/>
-        </HBox>
-    </bottom>
+        <!-- Motivation Text -->
+        <Label fx:id="motivationLabel"
+               style="-fx-font-size: 14px; -fx-text-fill: #374151;"/>
+    </VBox>
 
-</BorderPane>
+    <!-- Bottom Back Button -->
+    <HBox alignment="CENTER_LEFT"
+          AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="20">
+        <Button text="← Back"
+                onAction="#back"
+                prefWidth="120" prefHeight="42"
+                style="-fx-background-color: #F59E0B; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 12;"/>
+    </HBox>
+</AnchorPane>
