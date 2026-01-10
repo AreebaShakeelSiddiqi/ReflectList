@@ -147,8 +147,9 @@ Here’s the **class diagram** for the project:
 ---
 ## 🔮 Future Improvements
 
-* 🔐 Multi-user authentication with passwords
+* 🔁 Session management to keep users logged in until manual logout
 * ☁️ Cloud database support
 * ➕ Custom moods, Ayat, and Duas
 * 📤 Export / Import tasks feature
 * 🎨 Improved UI with animations and responsive layout
+
