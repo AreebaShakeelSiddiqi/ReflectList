@@ -147,6 +147,7 @@ Here’s the **class diagram** for the project:
 ---
 ## 🔮 Future Improvements
 
+* ⏰ Automatic daily task reset at midnight
 * 🔁 Session management to keep users logged in until manual logout
 * ☁️ Cloud database support
 * ➕ Custom moods, Ayat, and Duas
