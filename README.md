@@ -127,6 +127,7 @@ Here’s the **class diagram** for the project:
 
 ![todo_list](https://github.com/AreebaShakeelSiddiqi/ReflectList/blob/main/todo_list.png)
 </details>
+
 ---
 ## ⭐ Features
 
